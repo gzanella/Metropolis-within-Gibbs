@@ -4,15 +4,15 @@ library(matrixStats)
 library(rstan)
 
 
-source("https://raw.githubusercontent.com/gzanella/Metropolis-within-Gibbs/refs/heads/main/Figure1/Functions_Gibbs.R")
+
 source("https://raw.githubusercontent.com/gzanella/Metropolis-within-Gibbs/refs/heads/main/Figure1/Functions_MH.R")
 source("https://raw.githubusercontent.com/gzanella/Metropolis-within-Gibbs/refs/heads/main/Figure1/Functions_MALA.R")
 
 
-  ##if you also want exact Gibbs implementation:
+##if you also want exact Gibbs implementation:
 # library(ars)
-#source("Functions_Gibbs.R")
-  ## in the simulation Gibbs is replaced by MwG with large number of steps per iteration
+# source("https://raw.githubusercontent.com/gzanella/Metropolis-within-Gibbs/refs/heads/main/Figure1/Functions_Gibbs.R")
+## in the simulation Gibbs is replaced by MwG with large number of steps per iteration
 
 #simulate data
 simulate_logit <- function(J,m, mu, tau){
