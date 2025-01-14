@@ -4,9 +4,8 @@ library(matrixStats)
 library(rstan)
 
 
-
-source("Functions_MH.R")
-source("Functions_MALA.R")
+source("https://raw.githubusercontent.com/gzanella/Metropolis-within-Gibbs/refs/heads/main/Functions_MH.R")
+source("https://raw.githubusercontent.com/gzanella/Metropolis-within-Gibbs/refs/heads/main/Functions_MALA.R")
 
 
   ##if you also want exact Gibbs implementation:
