@@ -93,7 +93,8 @@ for(k in 1:length(M)){
       
       #STAN
       sink(file = "a", type = c("output", "message"))
-      out_STAN <- suppressMessages(suppressWarnings(stan(file="hierarchical_logit_stan.stan",algorithm = "NUTS", refresh = -1,data=list(m = m,J = J,y = y,alpha = alpha, beta = beta), chains = 1, iter = iterations+burnin, warmup = burnin))) 
+      out_STAN <- suppressMessages(suppressWarnings(stan(file="https://raw.githubusercontent.com/gzanella/Metropolis-within-Gibbs/refs/heads/main/Figure1/hierarchical_logit_stan.stan",
+                                                         algorithm = "NUTS", refresh = -1,data=list(m = m,J = J,y = y,alpha = alpha, beta = beta), chains = 1, iter = iterations+burnin, warmup = burnin))) 
       sink(type="output")
       #print("Stan done")
       
