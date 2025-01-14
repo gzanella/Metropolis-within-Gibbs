@@ -20,7 +20,7 @@ simulate_logit <- function(J,m, mu, tau, p){
   }
   return(list(X, Y))
 }
-source("Functions_HierCovariates.R")
+source("https://raw.githubusercontent.com/gzanella/Metropolis-within-Gibbs/refs/heads/main/Figure2_3/Functions_HierCovariates.R")
 
 #Simulation J = 30 and m = 30
 m = 30
