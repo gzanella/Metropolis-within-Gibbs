@@ -4,10 +4,9 @@ library(matrixStats)
 #### SET TO TRUE TO DO A SHORT RUN WITH MORE MONTE CARLO ERROR; FALSE TO DO A LONG RUN WITH LESS MONTE CARLO ERROR
 SHORT_RUN<-TRUE
 
-#### SET WORKING DIRECTORY AND LOAD AUXILIARY FUNCTIONS
-setwd("C:/Users/ZanellaG/Dropbox/ResearchProjects/Fil/Filippo/MwG/Code/Code_Figures_4_5_selected/")
-source("Functions_LogisticRegression.R")
-source("Functions_LogisticRegression_nonC.R")
+#### LOAD AUXILIARY FUNCTIONS
+source("https://raw.githubusercontent.com/gzanella/Metropolis-within-Gibbs/refs/heads/main/Figure4_5/Functions_LogisticRegression.R")
+source("https://raw.githubusercontent.com/gzanella/Metropolis-within-Gibbs/refs/heads/main/Figure4_5/Functions_LogisticRegression_nonC.R")
 
 ### SET THE NUMBER OF DATAPOINTS AND PARAMETERS FOR THE SIMULATION
 n_vec <- c(10,30,50)
