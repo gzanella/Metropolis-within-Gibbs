@@ -4,14 +4,14 @@ library(matrixStats)
 library(rstan)
 
 
-
-source("https://raw.githubusercontent.com/gzanella/Metropolis-within-Gibbs/refs/heads/main/Figure1/Functions_MH.R")
-source("https://raw.githubusercontent.com/gzanella/Metropolis-within-Gibbs/refs/heads/main/Figure1/Functions_MALA.R")
+setwd("")
+source("Functions_MH.R")
+source("Functions_MALA.R")
 
 
 ##if you also want exact Gibbs implementation:
 # library(ars)
-# source("https://raw.githubusercontent.com/gzanella/Metropolis-within-Gibbs/refs/heads/main/Figure1/Functions_Gibbs.R")
+# source("Functions_Gibbs.R")
 ## in the simulation Gibbs is replaced by MwG with large number of steps per iteration
 
 #simulate data
@@ -93,7 +93,7 @@ for(k in 1:length(M)){
       
       #STAN
       sink(file = "a", type = c("output", "message"))
-      out_STAN <- suppressMessages(suppressWarnings(stan(file="https://raw.githubusercontent.com/gzanella/Metropolis-within-Gibbs/refs/heads/main/Figure1/hierarchical_logit_stan.stan",
+      out_STAN <- suppressMessages(suppressWarnings(stan(file="hierarchical_logit_stan.stan",
                                                          algorithm = "NUTS", refresh = -1,data=list(m = m,J = J,y = y,alpha = alpha, beta = beta), chains = 1, iter = iterations+burnin, warmup = burnin))) 
       sink(type="output")
       #print("Stan done")
