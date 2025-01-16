@@ -27,11 +27,11 @@ parameters {
 model {
   //priors global parameters
   tau ~ gamma(alpha, beta);
-  //mu ~ normal(0, 1000/tau);
+  mu ~ normal(0, sqrt(1000/tau));
   
   // priors local parameters
   for(j in 1:J){
-    theta[j] ~ normal(mu, 1/tau);
+    theta[j] ~ normal(mu, 1/sqrt(tau));
   }
   
   //likelihood
